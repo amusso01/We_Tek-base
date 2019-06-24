@@ -44,7 +44,7 @@ function cleanSvg(){
 function svgTask(){
     return src(paths.svg + '/*.svg')
         .pipe(imagemin([
-            imagemin.svgo({
+            imageminSvgo({
                 plugins: [
                     {removeViewBox: false},
                     {prefixIds: 'we-tek'},
@@ -59,6 +59,29 @@ function svgTask(){
         .pipe(dest(paths.svg)
         );
 }
+
+// Image 
+function imageTaskJpg(){
+    return src(paths.imgsrc + '/*.{jpg,jpeg}')
+        .pipe(imagemin(
+            [imageminJpegtran({progressive: true})],
+            {verbose : true}
+        ))
+        .pipe(dest(paths.img)
+        );
+}
+
+function imageTaskPng(){
+    return src(paths.imgsrc + '/*.png')
+        .pipe(imagemin(
+            [imageminOptiPng(
+                {optimizationLevel: 4})],
+                {verbose : true}
+        ))
+        .pipe(dest(paths.img)
+        );
+}
+
 
 
 // Sass task
@@ -102,6 +125,10 @@ function jsTask(){
 // Watch task
 function watchTask(){
     watch(
+        [paths.imgsrc + '/*.jpg', paths.imgsrc + '/*.jpeg', paths.imgsrc + '/*.png'],
+        parallel(imageTaskJpg, imageTaskPng)
+    )
+    watch(
         [ paths.sass + '/**/**/*.scss'],
         series(sassTask)
     )
@@ -120,6 +147,16 @@ function watchTask(){
 exports.run = series(
     svgTask,
     cleanSvg,
+    imageTaskJpg,
+    imageTaskPng,
     parallel(sassTask, jsTask),
     parallel(watchTask, serve)
+)
+
+exports.build = series(
+    svgTask,
+    cleanSvg,
+    imageTaskJpg,
+    imageTaskPng,
+    parallel(sassTask, jsTask),
 )
