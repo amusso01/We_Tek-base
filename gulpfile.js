@@ -95,7 +95,7 @@ function sassTask(){
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({ errLogToConsole: true } ))
-        .pipe(postcss([ autoprifixer(), cssnano({ discardComments: { removeAll: true } }) ]))
+        .pipe(postcss([ autoprifixer(), cssnano() ]))
         .pipe(rename('theme.min.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(paths.css))
