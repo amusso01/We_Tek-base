@@ -12,6 +12,12 @@ const cssnano = require('cssnano');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const server = require('browser-sync').create();
+const clean = require('gulp-clean');
+const  imagemin = require('gulp-imagemin');
+const  imageminJpegtran = require('imagemin-jpegtran');
+const  imageminOptiPng = require('imagemin-optipng');
+const  imageminSvgo = require('imagemin-svgo');
+
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -28,6 +34,33 @@ function serve(done) {
     done();
 }
 
+// SVG function
+function cleanSvg(){
+    return src(paths.svg + '/*.svg', {read : false})
+        .pipe(clean()
+        );
+}
+
+function svgTask(){
+    return src(paths.svg + '/*.svg')
+        .pipe(imagemin([
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: false},
+                    {prefixIds: 'we-tek'},
+                    {cleanupIDs : true},
+                ]
+            })
+        ]))
+        .pipe(rename({
+            prefix : 'svg-',
+            extname : '.php'
+        }))
+        .pipe(dest(paths.svg)
+        );
+}
+
+
 // Sass task
 function sassTask(){
     return src(paths.sass + '/**/*.scss')
@@ -39,7 +72,7 @@ function sassTask(){
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({ errLogToConsole: true } ))
-        .pipe(postcss([ autoprifixer(), cssnano() ]))
+        .pipe(postcss([ autoprifixer(), cssnano({ discardComments: { removeAll: true } }) ]))
         .pipe(rename('theme.min.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(paths.css))
@@ -76,11 +109,17 @@ function watchTask(){
         [paths.jssrc + '/*.js'],
         series(jsTask)
     )
+    watch(
+        [paths.svg + '/*.svg'],
+        series(svgTask, cleanSvg)
+    )
 }
 
 
 // Default task
 exports.run = series(
-    parallel(sassTask ,jsTask ),
+    svgTask,
+    cleanSvg,
+    parallel(sassTask, jsTask),
     parallel(watchTask, serve)
 )

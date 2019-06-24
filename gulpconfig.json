@@ -1,6 +1,6 @@
 {
     "browserSyncOptions" : {
-      "proxy": "localhost/wordpress-base/",
+      "proxy": "localhost/we-tek-base/",
       "notify": false
     },
     "browserSyncWatchFiles" : [
@@ -18,7 +18,7 @@
       "jssrc": "./src/js",
       "node": "./node_modules/",
       "dev": "./src",
-      "dist": "./dist",
+      "svg": "./svg-templates",
       "vendor": ""
     }
   }

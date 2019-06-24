@@ -1,5 +1,6 @@
 
 import Hello from './component/hello'
+import {siteClick} from './component/general'
 
 
 const components =[
@@ -17,3 +18,7 @@ components.forEach(components => {
     }
 })
 
+
+$(document).ready(function() {
+   siteClick();
+});

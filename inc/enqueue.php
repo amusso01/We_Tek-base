@@ -18,7 +18,7 @@ wp_enqueue_style( 'we-tek-style', get_stylesheet_directory_uri() . '/css/theme.m
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
 
 
-	wp_enqueue_script( 'we-tek-navigation', get_template_directory_uri() . '/js/app.js', array(), '20151215', true );
+	wp_enqueue_script( 'we-tek-navigation', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
