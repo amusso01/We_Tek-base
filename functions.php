@@ -117,6 +117,21 @@ function we_tek_widgets_init() {
 add_action( 'widgets_init', 'we_tek_widgets_init' );
 
 /**
+ * Soil support.
+ */
+require get_template_directory() . '/inc/we_soil-support.php';
+
+/**
+ * Themes Setup.
+ */
+require get_template_directory() . '/inc/setup.php';
+
+/**
+ * Clean header from emoji.
+ */
+require get_template_directory() . '/inc/clean-style.php';
+
+/**
  * Enqueue scripts and styles.
  */
 require get_template_directory() . '/inc/enqueue.php';
