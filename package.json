@@ -48,6 +48,7 @@
     "ie >= 10"
   ],
   "dependencies": {
-    "bulma-scss": "^0.7.5-1"
+    "bulma-scss": "^0.7.5-1",
+    "spectre.css": "^0.5.8"
   }
 }

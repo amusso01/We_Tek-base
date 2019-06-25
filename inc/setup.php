@@ -3,6 +3,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+/*
+    * Remove admin bar
+    */
+function hide_admin_bar(){ return false; }
+add_filter( 'show_admin_bar', 'hide_admin_bar' );
+
+
 /*
     * Adding SVG and WEBP support
     */

@@ -117,6 +117,11 @@ function we_tek_widgets_init() {
 add_action( 'widgets_init', 'we_tek_widgets_init' );
 
 /**
+ * Bulma Nav support.
+ */
+require get_template_directory() . '/inc/bulma-navwalker.php';
+
+/**
  * Soil support.
  */
 require get_template_directory() . '/inc/we_soil-support.php';
