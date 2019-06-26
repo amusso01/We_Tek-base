@@ -1,16 +1,116 @@
 
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: "Muli", "Helvetica", "Arial", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
 $link: $pink;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+
+
+// Initial
+
+$black	hsl(0, 0%, 4%)
+$black-bis	hsl(0, 0%, 7%)
+$black-ter	hsl(0, 0%, 14%)
+$grey-darker	hsl(0, 0%, 21%)
+$grey-dark	hsl(0, 0%, 29%)
+$grey	hsl(0, 0%, 48%)
+$grey-light	hsl(0, 0%, 71%)
+$grey-lighter	hsl(0, 0%, 86%)
+$white-ter	hsl(0, 0%, 96%)
+$white-bis	hsl(0, 0%, 98%)
+$white	hsl(0, 0%, 100%)
+$orange	hsl(14, 100%, 53%)
+$yellow	hsl(48, 100%, 67%)
+$green	hsl(141, 71%, 48%)
+$turquoise	hsl(171, 100%, 41%)
+$blue	hsl(217, 71%, 53%)
+$purple	hsl(271, 100%, 71%)
+$red	hsl(348, 100%, 61%)
+$family-sans-serif	BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$family-monospace	monospace
+$render-mode	optimizeLegibility
+$size-1	3rem
+$size-2	2.5rem
+$size-3	2rem
+$size-4	1.5rem
+$size-5	1.25rem
+$size-6	1rem
+$size-7	0.75rem
+$weight-light	300
+$weight-normal	400
+$weight-medium	500
+$weight-semibold	600
+$weight-bold	700
+$gap	24px
+$tablet	769px
+$desktop	960px + (2 * $gap)
+$widescreen	1152px + (2 * $gap)
+$fullhd	1344px + (2 * $gap)
+$easing	ease-out
+$radius-small	2px
+$radius	3px
+$radius-large	5px
+$speed	86ms
+
+
+
+// DERIVED
+$primary	$turquoise
+$info	$blue
+$success	$green
+$warning	$yellow
+$danger	$red
+$light	$white-ter
+$dark	$grey-darker
+$orange-invert	findColorInvert($orange)
+$yellow-invert	findColorInvert($yellow)
+$green-invert	findColorInvert($green)
+$turquoise-invert	findColorInvert($turquoise)
+$blue-invert	findColorInvert($blue)
+$purple-invert	findColorInvert($purple)
+$red-invert	findColorInvert($red)
+$primary-invert	$turquoise-invert
+$info-invert	$blue-invert
+$success-invert	$green-invert
+$warning-invert	$yellow-invert
+$danger-invert	$red-invert
+$light-invert	$dark
+$dark-invert	$light
+$background	$white-ter
+$border	$grey-lighter
+$border-hover	$grey-light
+$text	$grey-dark
+$text-invert	findColorInvert($text)
+$text-light	$grey
+$text-strong	$grey-darker
+$code	$red
+$code-background	$background
+$pre	$text
+$pre-background	$background
+$link	$primary
+$link-invert	$primary-invert
+$link-visited	$purple
+$link-hover	$grey-darker
+$link-hover-border	$grey-light
+$link-focus	$grey-darker
+$link-focus-border	$primary
+$link-active	$grey-darker
+$link-active-border	$grey-dark
+$family-primary	$family-sans-serif
+$family-code	$family-monospace
+$size-small	$size-7
+$size-normal	$size-6
+$size-medium	$size-5
+$size-large	$size-4
+$colors	("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert))
+$shades	("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis)
+$sizes	$size-1 $size-2 $size-3 $size-4 $size-5 $size-6

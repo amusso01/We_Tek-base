@@ -27,19 +27,19 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php the_content(); ?>
 </main><!-- #main -->
 
-<div class="container">
-    <div class="columns ">
-      <div class="column is-6">
-        <p class="notification is-primary">First column</p>
-      </div>
-      <div class="column">
-        <p class="notification is-primary">Second column</p>
-      </div>
-      <div class="column">
-        <p class="notification is-primary">Third column</p>
-      </div>
-      <div class="column">
-        <p class="notification is-primary">Fourth column</p>
-      </div>
+
+<div class="columns">
+    <div class="column is-6">
+    <p class="notification is-primary">First column</p>
+    </div>
+    <div class="column">
+    <p class="notification is-primary">Second column</p>
+    </div>
+    <div class="column">
+    <p class="notification is-primary">Third column</p>
+    </div>
+    <div class="column">
+    <p class="notification is-primary">Fourth column</p>
     </div>
 </div>
+
