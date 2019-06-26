@@ -11,12 +11,14 @@
  *
  * @package We_Tek
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" >
-			<h1>HELLO WORLD</h1>
 		<?php
 		if ( have_posts() ) :
 

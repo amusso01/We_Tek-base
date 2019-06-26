@@ -5,10 +5,51 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /*
+    * Render template
+    */
+function var_template_include( $t ){
+    $GLOBALS['current_theme_template'] = basename($t);
+    return $t;
+}
+
+function get_current_template( $echo = false ) {
+    if( !isset( $GLOBALS['current_theme_template'] ) )
+        return false;
+    if( $echo )
+        echo $GLOBALS['current_theme_template'];
+    else
+        return $GLOBALS['current_theme_template'];
+}
+add_filter( 'template_include', 'var_template_include', 1000 );
+
+/*
+    * Disable File Editing
+    */
+define('DISALLOW_FILE_EDIT', true);
+
+/*
     * Remove admin bar
     */
 function hide_admin_bar(){ return false; }
 add_filter( 'show_admin_bar', 'hide_admin_bar' );
+
+
+/*
+    * Add backward compatibility for wp_body_open()
+    */
+if ( ! function_exists( 'wp_body_open' ) ) {
+    /**
+     * Fire the wp_body_open action.
+     *
+     * Added for backwards compatibility to support WordPress versions prior to 5.2.0.
+     */
+    function wp_body_open() {
+        /**
+         * Triggered after the opening <body> tag.
+         */
+        do_action( 'wp_body_open' );
+    }
+}
 
 
 /*
@@ -21,13 +62,6 @@ function cc_mime_types($mimes) {
 	return $mimes;
   }
   add_filter('upload_mimes', 'cc_mime_types');
-
-
-/*
-    * Adding Thumbnail basic support
-    */
-
-add_theme_support( 'post-thumbnails' );
 
 
 /*

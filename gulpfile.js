@@ -133,7 +133,7 @@ function watchTask(){
         series(sassTask)
     )
     watch(
-        [paths.jssrc + '/*.js'],
+        [paths.jssrc + '/**/*.js'],
         series(jsTask)
     )
     watch(

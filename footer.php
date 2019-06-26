@@ -8,27 +8,26 @@
  *
  * @package We_Tek
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer is-hidden-fullhd">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'we-tek' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'we-tek' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'we-tek' ), 'we-tek', '<a href="http://underscores.me/">Andrea Musso</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	
+	<footer class="footer">
+		<div class="has-text-centered">
+			<p>
+				<strong>WE TEK </strong> by <a href="#">Andrea Musso</a>.
+			</p>
+		</div>
+	</footer>
+	
+	
+</div><!-- #page .site -->
+<div><strong>Current template:</strong> <?php get_current_template( true ); ?></div>
 
 <?php wp_footer(); ?>
 

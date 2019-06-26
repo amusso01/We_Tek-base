@@ -5,7 +5,13 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package We_Tek
+ * 
+ * 
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 
 if ( ! function_exists( 'we_tek_setup' ) ) :
 	/**

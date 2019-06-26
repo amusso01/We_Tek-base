@@ -6,6 +6,9 @@
  *
  * @package We_Tek
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 ?>
 

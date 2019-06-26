@@ -1,5 +1,6 @@
 
 import Hello from './component/hello'
+import Menu from './component/menu'
 import {siteClick} from './component/general'
 
 
@@ -7,7 +8,7 @@ const components =[
     {
         class: Hello,
         selector : '.hello'
-    }
+    },
 ]
 
 components.forEach(components => {
@@ -21,4 +22,10 @@ components.forEach(components => {
 
 $(document).ready(function() {
    siteClick();
+
+    //Hamburger menu    
+   let menu = new Menu('burger-button', 'primary-menu');
+   menu.open();
+
 });
+
