@@ -16,7 +16,7 @@ $input-shadow: none;
 
 
 // Initial
-
+/*
 $black	hsl(0, 0%, 4%)
 $black-bis	hsl(0, 0%, 7%)
 $black-ter	hsl(0, 0%, 14%)
@@ -64,6 +64,7 @@ $speed	86ms
 
 
 // DERIVED
+
 $primary	$turquoise
 $info	$blue
 $success	$green
@@ -114,3 +115,4 @@ $size-large	$size-4
 $colors	("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert))
 $shades	("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis)
 $sizes	$size-1 $size-2 $size-3 $size-4 $size-5 $size-6
+*/
