@@ -1,18 +1,26 @@
 
 
 // Update Bulma's global variables
-$family-sans-serif: "Muli", "Helvetica", "Arial", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+$family-sans-serif: 'Stylish', sans-serif;
+$primary: $purple; // <---- primary color
+$text : $pink; // <---- text color
+$info : green; // <---- is-info color
 
+
+// link
+$link: blue; // <---- link color
+$link-hover: red; // <---- link color:hover
+$link-visited : $primary; // <---- link color visited
+
+
+// Always check default below
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
+$body-background-color: white;// <---- body background color
+$body-size: 13px; // <---- body font-size
+$hr-background-color: black; // <---- hr color
+// $hr-height: // <---- hr height 2px default
+
 
 
 // Initial
@@ -115,4 +123,31 @@ $size-large	$size-4
 $colors	("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert))
 $shades	("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis)
 $sizes	$size-1 $size-2 $size-3 $size-4 $size-5 $size-6
+
+// GENERIC 
+$body-background-color	color	$white	hsl(0, 0%, 100%)
+$body-size	size	16px	
+$body-min-width	size	300px	
+$body-rendering	keyword	optimizeLegibility	
+$body-family	font-family	$family-primary	BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$body-overflow-x	string	hidden	
+$body-overflow-y	string	scroll	
+$body-color	color	$text	hsl(0, 0%, 29%)
+$body-font-size	size	1em	
+$body-weight	font-weight	$weight-normal	400
+$body-line-height	unitless	1.5	
+$code-family	font-family	$family-code	monospace
+$code-padding	size	0.25em 0.5em 0.25em	
+$code-weight	font-weight	normal	
+$code-size	size	0.875em	
+$small-font-size	size	0.875em	
+$hr-background-color	color	$background	hsl(0, 0%, 96%)
+$hr-height	size	2px	
+$hr-margin	size	1.5rem 0	
+$strong-color	color	$text-strong	hsl(0, 0%, 21%)
+$strong-weight	font-weight	$weight-bold	700
+$pre-font-size	size	0.875em	
+$pre-padding	size	1.25rem 1.5rem	
+$pre-code-font-size	size	1em	
+
 */

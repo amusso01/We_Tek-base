@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<footer class="footer">
 		<div class="has-text-centered">
 			<p>
-				<strong>WE TEK </strong> by <a href="#">Andrea Musso</a>.
+				<strong><i class="fas fa-coffee"></i>WE TEK </strong> by <a href="#">Andrea Musso</a>.
 			</p>
 		</div>
 	</footer>

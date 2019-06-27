@@ -2,6 +2,7 @@
 import Hello from './component/hello'
 import Menu from './component/menu'
 import {siteClick} from './component/general'
+import {all} from '@fortawesome/fontawesome-free/js/all' // => rememebr you can import icon individually
 
 
 const components =[

@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
@@ -48,7 +49,6 @@
     "ie >= 10"
   ],
   "dependencies": {
-    "bulma-scss": "^0.7.5-1",
-    "spectre.css": "^0.5.8"
+    "bulma-scss": "^0.7.5-1"
   }
 }

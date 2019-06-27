@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'we-tek' ); ?></a>
 			<!-- ******************* The Navbar Area ******************* -->
 			<div id="wrapper-navbar">
-				<nav class="navbar is-fixed-top" aria-label="main navigation">
+				<nav class="navbar" role="navigation" aria-label="main navigation">
 					<div class="navbar-brand">
 						<!-- Your site title as branding in the menu -->
 						<a class="navbar-item" href="<?php echo esc_url( home_url( '/' ) );?>">

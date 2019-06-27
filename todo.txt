@@ -1,4 +1,4 @@
 - Manage plugin with composer
 - Clean Css purge css for wordpress, pipe it on the sass task 
-- Create a framework branch (Bulma?)
+- Reference Bulma from node_module folder
 

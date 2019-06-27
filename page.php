@@ -20,7 +20,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<a href="">SAmple link</a>
+			<hr>
 		<?php
 		while ( have_posts() ) :
 			the_post();
