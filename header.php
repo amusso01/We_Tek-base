@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="navbar-brand">
 						<!-- Your site title as branding in the menu -->
 						<a class="navbar-item" href="<?php echo esc_url( home_url( '/' ) );?>">
-							<img alt="My Logo" src="<?php echo get_template_directory_uri();?>/images/my-logo.png">
+							<img alt="My Logo" src="<?php echo get_template_directory_uri();?>/img/my-logo.png">
 						</a>
 						<!-- end custom logo -->
 						<button id="burger-button" class="button navbar-burger is-active" data-target="primary-menu" aria-controls="primary-menu" aria-haspopup="true" aria-label="Menu Button" aria-pressed="false">
@@ -46,6 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<span aria-hidden="true"></span>
 						</button>
 					</div>
+
 
 					<!-- The WordPress Menu goes here -->
 					<div id="primary-menu" class="navbar-menu is-active">

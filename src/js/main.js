@@ -1,11 +1,25 @@
-
+// import local dependencies
+import Router from './util/Router';
+import common from './routes/common';
+import home from './routes/home';
 import Hello from './component/hello'
 import Menu from './component/menu'
 import {siteClick} from './component/general'
 import TweenMax from "gsap/TweenMax"
-// import {all} from '@fortawesome/fontawesome-free/js/all' // => rememebr you can import icon individually
 
 
+
+/** Populate Router instance with DOM routes */
+const routes = new Router({
+    // All pages
+    common,
+    // Home page
+    home,
+   
+  });
+
+
+// Component
 const components =[
     {
         class: Hello,
@@ -22,12 +36,7 @@ components.forEach(components => {
 })
 
 
-$(document).ready(function() {
-   siteClick();
-
-    //Hamburger menu    
-   let menu = new Menu('burger-button', 'primary-menu');
-   menu.open();
-
-});
+jQuery(document).ready(() => {
+    routes.loadEvents();
+})
 
